@@ -21,7 +21,7 @@ public class OracleConnect {
         try{  
             //Class.forName("oracle.jdbc.OracleDriver");
             Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "DBMS","dbms");
-            JOptionPane.showMessageDialog(null, "Connection Establised");
+            //JOptionPane.showMessageDialog(null, "Connection Establised");
             return conn;
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
