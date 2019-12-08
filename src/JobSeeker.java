@@ -49,7 +49,6 @@ public class JobSeeker extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -173,7 +172,7 @@ public class JobSeeker extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         setVisible(false);
-        new Home().setVisible(true);
+        new Landing().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -188,10 +187,11 @@ public class JobSeeker extends javax.swing.JFrame {
             {
                 rs.close();
                 pst.close();
-
-                JOptionPane.showMessageDialog(null, "Welcome ");
+                
                 setVisible(false);
-                new JobSeekerDashboard().setVisible(true);
+                JOptionPane.showMessageDialog(null, "Welcome ");
+                String msg = jTextField4.getText();
+                new JobSeekerDashboard(msg).setVisible(true);
              
                 
             }
@@ -207,7 +207,7 @@ public class JobSeeker extends javax.swing.JFrame {
                 rs.close();
                 pst.close();
             } catch (SQLException ex) {
-                Logger.getLogger(SignIn.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AdminLogin.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed

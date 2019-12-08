@@ -50,7 +50,7 @@ public class JobProvider extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -205,7 +205,7 @@ public class JobProvider extends javax.swing.JFrame {
                 rs.close();
                 pst.close();
             } catch (SQLException ex) {
-                Logger.getLogger(SignIn.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AdminLogin.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         
@@ -215,7 +215,7 @@ public class JobProvider extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        new Home().setVisible(true);
+        new Landing().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

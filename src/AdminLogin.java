@@ -17,16 +17,16 @@ import javax.swing.JOptionPane;
  *
  * @author Ashfaq Afzal Chowdhury
  */
-public class SignIn extends javax.swing.JFrame {
+public class AdminLogin extends javax.swing.JFrame {
 
     /**
-     * Creates new form SignIn
+     * Creates new form AdminLogin
      */
     
     Connection conn;
     ResultSet rs;
     PreparedStatement pst;
-    public SignIn() {
+    public AdminLogin() {
         initComponents();
         conn = OracleConnect.ConnectDb();
     }
@@ -129,7 +129,7 @@ public class SignIn extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -185,7 +185,7 @@ public class SignIn extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
         
-         String sql = "select * from login  where id = ? and password = ?";
+         String sql = "select * from admin  where User_Name  = ? and password = ?";
         try{
             pst = conn.prepareStatement(sql);
             pst.setString(1, userid.getText());
@@ -195,8 +195,10 @@ public class SignIn extends javax.swing.JFrame {
             {
                 rs.close();
                 pst.close();
-                JOptionPane.showMessageDialog(null, "Welcome Admin");
-
+                
+                setVisible(false);
+                JOptionPane.showMessageDialog(null, "Welcome ");
+                new adminDashboard().setVisible(true);
                 
             }
             else
@@ -211,7 +213,7 @@ public class SignIn extends javax.swing.JFrame {
                 rs.close();
                 pst.close();
             } catch (SQLException ex) {
-                Logger.getLogger(SignIn.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AdminLogin.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         
@@ -221,7 +223,7 @@ public class SignIn extends javax.swing.JFrame {
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        new Home().setVisible(true);
+        new Landing().setVisible(true);
     }//GEN-LAST:event_backActionPerformed
 
     /**
@@ -241,20 +243,21 @@ public class SignIn extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SignIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SignIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SignIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SignIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SignIn().setVisible(true);
+                new AdminLogin().setVisible(true);
             }
         });
     }
