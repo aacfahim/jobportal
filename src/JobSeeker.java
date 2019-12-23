@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Ashfaq Afzal Chowdhury
+ * @author Arnob
  */
 public class JobSeeker extends javax.swing.JFrame {
 
@@ -49,6 +49,7 @@ public class JobSeeker extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
+        setTitle("JOB PORTAL SYSTEM");
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -191,6 +192,7 @@ public class JobSeeker extends javax.swing.JFrame {
                 setVisible(false);
                 JOptionPane.showMessageDialog(null, "Welcome ");
                 String msg = jTextField4.getText();
+                setVisible(false);
                 new JobSeekerDashboard(msg).setVisible(true);
              
                 

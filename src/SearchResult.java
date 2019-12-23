@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Ashfaq Afzal Chowdhury
+ * @author aacfa
  */
 public class SearchResult extends javax.swing.JFrame {
 

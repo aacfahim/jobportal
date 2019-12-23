@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Ashfaq Afzal Chowdhury
+ * @author fhoqu
  */
 public class PostJob extends javax.swing.JFrame {
 
@@ -203,6 +203,8 @@ public class PostJob extends javax.swing.JFrame {
             String sql = null;
             
             sql = "insert into JOBS(C_USERNAME, JOB_TITLE, SALARY, EXPERIENCE, QUALIFICATIONS) values (?,?,?,?,?)";
+            
+            
             pst = conn.prepareStatement(sql);
             pst.setString(1, jTextField3.getText());
             pst.setString(2, jTextField1.getText());
@@ -218,9 +220,8 @@ public class PostJob extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
         
-        String msg = jTextField3.getText();
-        new PostJob(msg).setVisible(true);
         setVisible(false);
+        String msg = jTextField3.getText(); 
         new JobProviderDashboard(msg).setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Ashfaq Afzal Chowdhury
+ * @author aacfa
  */
 public class JobProvider extends javax.swing.JFrame {
 
@@ -189,6 +189,7 @@ public class JobProvider extends javax.swing.JFrame {
 
                 JOptionPane.showMessageDialog(null, "Welcome ");
                 String msg = jTextField1.getText();
+                setVisible(false);
                 new JobProviderDashboard(msg).setVisible(true);
              
                 

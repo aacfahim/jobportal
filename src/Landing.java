@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Ashfaq Afzal Chowdhury
+ * @author aacfa
  */
 public class Landing extends javax.swing.JFrame {
 
@@ -37,6 +37,7 @@ public class Landing extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("WELCOME");
         setIconImages(null);
         setResizable(false);
 

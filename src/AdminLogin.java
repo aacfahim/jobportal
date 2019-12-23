@@ -92,7 +92,7 @@ public class AdminLogin extends javax.swing.JFrame {
         );
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("USER ID:");
+        jLabel2.setText("User Name:");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("PASSWORD:");

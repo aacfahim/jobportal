@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Ashfaq Afzal Chowdhury
+ * @author fhoqu
  */
 public class JP_EP extends javax.swing.JFrame {
 
